@@ -1,5 +1,9 @@
 #!/bin/sh
-# HELP
+
+# Chooses a random wallpaper from the Unsplash API and passes it onto pywal for it to set the colorscheme
+
+###############################################################
+# HELP options
 Help()
 {
 	echo "Fast script to get a random wallpaper from unsplash with specified query"
@@ -31,7 +35,7 @@ echo
 echo "Setting wallpaper for: $Query!"
 echo
 
-# remove spaces
+# removes spaces and replaces it for URL-encode
 string=${Query// /%20}
 
 # maybe set different resolution in the future
